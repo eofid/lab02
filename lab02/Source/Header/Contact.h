@@ -14,10 +14,8 @@ public:
     // Конструктор
     Contact(const std::string& name, const std::string& phone, const std::string& email);
 
-    // Операторы как скрытые друзья
+    // Сделаем оператор << скрытым другом класса Contact
     friend std::ostream& operator<<(std::ostream& os, const Contact& contact);
-    friend std::istream& operator>>(std::istream& is, Contact& contact);
-    friend bool operator==(const Contact& lhs, const Contact& rhs);
 };
 
 #endif // CONTACT_H
