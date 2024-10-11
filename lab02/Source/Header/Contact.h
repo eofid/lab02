@@ -5,22 +5,17 @@
 #include <iostream>
 
 class Contact {
-public:
+private:
     std::string name;
     std::string phone;
     std::string email;
 
-    // Конструктор с параметрами
+public:
+    // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
     Contact(const std::string& name, const std::string& phone, const std::string& email);
 
-    // Дружественная функция для перегрузки оператора "=="
-    friend bool operator==(const Contact& lhs, const Contact& rhs);
-
-    // Метод для записи контакта в поток
+    // РЎРґРµР»Р°РµРј РѕРїРµСЂР°С‚РѕСЂ << СЃРєСЂС‹С‚С‹Рј РґСЂСѓРіРѕРј РєР»Р°СЃСЃР° Contact
     friend std::ostream& operator<<(std::ostream& os, const Contact& contact);
-
-    // Метод для чтения контакта из потока
-    friend std::istream& operator>>(std::istream& is, Contact& contact);
 };
 
 #endif // CONTACT_H
