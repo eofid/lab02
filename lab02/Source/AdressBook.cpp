@@ -113,7 +113,9 @@ void AddressBook::loadFromFile(const std::string& filename) {
 
     contacts.clear();  // Î÷èùàåì òåêóùèå êîíòàêòû
 
-    std::string name, phone, email;
+    std::string name;
+    std:: string phone;
+    std:: string email;
     while (std::getline(file, name)) {  // ×òåíèå èìåíè
         if (std::getline(file, phone) && std::getline(file, email)) {  // ×òåíèå òåëåôîíà è email
             contacts.emplace_back(name, phone, email);  // Äîáàâëÿåì êîíòàêò â ñïèñîê
