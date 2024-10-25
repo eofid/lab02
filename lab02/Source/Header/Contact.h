@@ -15,7 +15,10 @@ public:
     Contact(const std::string& name, const std::string& phone, const std::string& email);
 
     // Сделаем оператор << скрытым другом класса Contact
-    friend std::ostream& operator<<(std::ostream& os, const Contact& contact);
+    friend std::ostream& operator<<(std::ostream& os, const Contact& contact){
+         os << contact.name << "\n" << contact.phone << "\n" << contact.email << "\n";
+    return os;
+    }
 };
 
 #endif // CONTACT_H
